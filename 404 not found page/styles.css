@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  background-image: linear-gradient(
+    to top,
+    #2e1753,
+    #1f1746,
+    #131537,
+    #0d1028,
+    #050819
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  max-width: 50em;
+  margin: 0 auto;
+}
+
+.content {
+  text-align: center;
+}
+
+.contentTitle {
+  background: linear-gradient(#00cbd4, #9575cd);
+  background-clip: text;
+  font-family: "Montserrat";
+  font-size: 18rem;
+  font-weight: 200;
+  margin: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contentType {
+  color: #fff;
+  font-weight: 600;
+  font-size: 2.7rem;
+  letter-spacing: 0.126rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.contentDetail {
+  color: #fff;
+  font-family: "Source Sans Pro";
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 2;
+}
+
+.link {
+  color: #fff;
+  padding: 0.25rem 0.6rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.homePage {
+  background: #9575cd;
+}
+
+.searchFeature {
+  background: #00cbd4;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #fff;
+  right: 0;
+  animation: starTwinkle 3s infinite linear;
+}
+
+.astronaut img {
+  width: 100px;
+  position: absolute;
+  top: 55%;
+  animation: astronautFly 6s infinite linear;
+}
+
+@keyframes astronautFly {
+  0% {
+    left: -100px;
+  }
+  25% {
+    top: 50%;
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(45deg);
+    top: 55%;
+  }
+  75% {
+    top: 60%;
+    transform: rotate(30deg);
+  }
+  100% {
+    left: 110%;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes starTwinkle {
+  0% {
+    background: rgba(255, 255, 255, 0.4);
+  }
+  25% {
+    background: rgba(255, 255, 255, 0.8);
+  }
+  50% {
+    background: rgba(255, 255, 255, 1);
+  }
+  75% {
+    background: rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    background: rgba(255, 255, 255, 0.4);
+  }
+}
+
+@media (max-width: 40rem) {
+  .contentTitle {
+    font-size: 10rem;
+  }
+  .contentType {
+    font-size: 1.26rem;
+  }
+  .contentDetail {
+    font-size: 1rem;
+  }
+}
