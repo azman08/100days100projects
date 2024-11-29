@@ -1,0 +1,85 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  padding: 20px;
+}
+
+.trigger-button {
+  background: none;
+  border: none;
+  color: #1e90ff;
+  cursor: pointer;
+  font-size: 1.2rem;
+  text-decoration: underline;
+}
+
+.hover-card {
+  display: none;
+  position: absolute;
+  background-color: #1f1f1f;
+  color: white;
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  z-index: 1000;
+}
+
+.hover-card-content {
+  display: flex;
+  gap: 10px;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+}
+
+.avatar-fallback {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #444444;
+  color: #ffffff;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.username {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 0.9rem;
+  margin: 5px 0;
+}
+
+.joined-info {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.calendar-icon {
+  margin-right: 5px;
+}
+
+.joined-text {
+  font-size: 0.8rem;
+  color: #aaaaaa;
+}

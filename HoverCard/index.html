@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hover Card Demo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="hover-card-container">
+      <button
+        class="trigger-button"
+        onmouseover="showHoverCard()"
+        onmouseout="hideHoverCard()"
+      >
+        Azman08
+      </button>
+      <div class="hover-card" id="hoverCard">
+        <div class="hover-card-content">
+          <div class="avatar">
+            <img
+              src="https://github.com/azman08"
+              alt="azman08"
+              class="avatar-image"
+            />
+            <div class="avatar-fallback">VC</div>
+          </div>
+          <div class="info">
+            <h4 class="username">Azman08</h4>
+            <p class="description">
+              The React Framework – created and maintained by Azman08
+            </p>
+            <div class="joined-info">
+              <span class="calendar-icon">🗓️</span>
+              <span class="joined-text">Joined December 2023</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
