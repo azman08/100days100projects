@@ -2,7 +2,7 @@
 
 ## 🚀 Live Demo
 
-**[→ 100days100projects-chi.vercel.app](100days100projects-yoink.vercel.app)**
+**[YOINK](https://100days100projects-yoink.vercel.app/))**
 
 ---
 
@@ -155,3 +155,4 @@ If this helped you or inspired your own build, drop a star — it keeps the chal
 Built with ❤️ and consistency · Part of the 100 Days 100 Projects series</sub>
 
 </div>
+
