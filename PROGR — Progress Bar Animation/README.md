@@ -1,6 +1,5 @@
 # ▣ PROGR — Progress Bar Animation
 
-> **Day [X] of 100** · [100 Days 100 Projects Challenge](https://100days100projects-chi.vercel.app)
 
 ![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?style=flat&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-%231572B6.svg?style=flat&logo=css3&logoColor=white)
@@ -11,11 +10,13 @@
 
 ## 🚀 Live Demo
 
+https://100days100projects-progr.vercel.app/
 ---
 
 ## 📌 About
 
 Everyone has seen a progress bar. Nobody thinks about how it actually works.
+
 
 **PROGR** turns that boring UI element into a full interactive showcase — 10 distinct animation styles, a live custom builder, global controls, and auto-play on scroll. Built with zero frameworks, zero libraries, and zero dependencies. Just HTML, CSS, and JavaScript doing exactly what they were made for.
 
@@ -144,7 +145,6 @@ progress-bar/
 - No skipped days
 - No perfection paralysis
 
-**→ Full series: [100days100projects-chi.vercel.app](https://100days100projects-chi.vercel.app)**
 
 ---
 
@@ -169,3 +169,4 @@ If this helped you or inspired your own build, drop a star — it keeps the chal
 <div align="center">
   <sub>Built with ❤️ and consistency · Part of the 100 Days 100 Projects series</sub>
 </div>
+
