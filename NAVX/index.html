@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NAVX — Sticky Navbar on Scroll</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@300;400;500;700;800;900&family=Chivo+Mono:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ═══════════════════════════
+       STICKY NAVBAR
+       ═══════════════════════════ -->
+    <header class="navbar" id="navbar" role="banner">
+      <!-- Scroll progress bar at top of navbar -->
+      <div class="scroll-progress" id="scroll-progress" aria-hidden="true">
+        <div class="scroll-progress-fill" id="scroll-progress-fill"></div>
+      </div>
+
+      <div class="navbar-inner">
+        <!-- Logo -->
+        <a href="#home" class="nav-logo" aria-label="NAVX home">
+          <span class="nav-logo-icon" aria-hidden="true">◈</span>
+          <span class="nav-logo-text">NAVX</span>
+          <span class="nav-logo-badge">100D</span>
+        </a>
+
+        <!-- Desktop nav links -->
+        <nav
+          class="nav-links"
+          id="nav-links"
+          role="navigation"
+          aria-label="Main navigation"
+        >
+          <a href="#home" class="nav-link active" data-section="home">Home</a>
+          <a href="#about" class="nav-link" data-section="about">About</a>
+          <a href="#features" class="nav-link" data-section="features"
+            >Features</a
+          >
+          <a href="#showcase" class="nav-link" data-section="showcase"
+            >Showcase</a
+          >
+          <a href="#tech" class="nav-link" data-section="tech">Tech</a>
+          <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+        </nav>
+
+        <!-- Right side -->
+        <div class="nav-actions">
+          <!-- Social icons -->
+          <a
+            href="https://www.linkedin.com/in/azman08/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="nav-social-btn"
+            aria-label="LinkedIn"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://github.com/azman08"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="nav-social-btn"
+            aria-label="GitHub"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+              />
+            </svg>
+          </a>
+
+          <!-- Theme toggle -->
+          <button
+            class="nav-theme-btn"
+            id="btn-theme"
+            aria-label="Toggle theme"
+          >
+            <span id="theme-icon">☽</span>
+          </button>
+
+          <!-- CTA button -->
+          <a href="#contact" class="nav-cta">Get In Touch</a>
+
+          <!-- Hamburger (mobile) -->
+          <button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <span class="ham-line line-1"></span>
+            <span class="ham-line line-2"></span>
+            <span class="ham-line line-3"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Navbar state indicator (debug panel) -->
+      <div class="nav-state-badge" id="nav-state-badge" aria-live="polite">
+        <span class="state-dot" id="state-dot"></span>
+        <span class="state-text" id="state-text">Default</span>
+      </div>
+    </header>
+
+    <!-- Mobile Menu Drawer -->
+    <div
+      class="mobile-menu"
+      id="mobile-menu"
+      role="dialog"
+      aria-label="Mobile navigation"
+      aria-hidden="true"
+    >
+      <div class="mobile-menu-inner">
+        <nav class="mobile-nav-links" aria-label="Mobile navigation">
+          <a href="#home" class="mobile-nav-link" data-section="home">
+            <span class="mobile-link-num">01</span> Home
+          </a>
+          <a href="#about" class="mobile-nav-link" data-section="about">
+            <span class="mobile-link-num">02</span> About
+          </a>
+          <a href="#features" class="mobile-nav-link" data-section="features">
+            <span class="mobile-link-num">03</span> Features
+          </a>
+          <a href="#showcase" class="mobile-nav-link" data-section="showcase">
+            <span class="mobile-link-num">04</span> Showcase
+          </a>
+          <a href="#tech" class="mobile-nav-link" data-section="tech">
+            <span class="mobile-link-num">05</span> Tech
+          </a>
+          <a href="#contact" class="mobile-nav-link" data-section="contact">
+            <span class="mobile-link-num">06</span> Contact
+          </a>
+        </nav>
+        <div class="mobile-socials">
+          <a
+            href="https://www.linkedin.com/in/azman08/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mobile-social"
+            >LinkedIn</a
+          >
+          <a
+            href="https://github.com/azman08"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mobile-social"
+            >GitHub</a
+          >
+          <a
+            href="https://linktr.ee/codewithazman"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mobile-social"
+            >Linktree</a
+          >
+        </div>
+        <div class="mobile-footer-text">
+          100 Days · 100 Projects · Azman Ali
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu overlay -->
+    <div class="mobile-overlay" id="mobile-overlay" aria-hidden="true"></div>
+
+    <main id="main-content">
+      <!-- HERO SECTION -->
+      <section class="section hero-section" id="home" aria-label="Hero">
+        <div class="noise-overlay" aria-hidden="true"></div>
+        <div class="bg-grid" aria-hidden="true"></div>
+        <div class="glow-blob glow-1" aria-hidden="true"></div>
+        <div class="glow-blob glow-2" aria-hidden="true"></div>
+
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot" aria-hidden="true"></span>
+            Day [X] · 100 Days 100 Projects
+          </div>
+          <h1 class="hero-title">
+            Sticky Navbar<br />
+            <span class="hero-accent">on Scroll</span>
+          </h1>
+          <p class="hero-sub">
+            Scroll down to see the navbar transform - glassmorphism,
+            hide-on-scroll-down, reveal-on-scroll-up, active section detection,
+            progress bar and more.
+          </p>
+          <div class="hero-btns">
+            <a href="#features" class="btn-primary">Explore Features ↓</a>
+            <a
+              href="https://github.com/azman08"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-ghost"
+              >View on GitHub</a
+            >
+          </div>
+          <div class="hero-scroll-hint" aria-hidden="true">
+            <span class="scroll-hint-text">Scroll to explore</span>
+            <span class="scroll-hint-arrow">↓</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT SECTION -->
+      <section class="section about-section" id="about" aria-label="About">
+        <div class="section-inner">
+          <div class="section-tag">
+            <span class="tag-num">01</span>
+            <span class="tag-line" aria-hidden="true"></span>
+            About
+          </div>
+          <h2 class="section-title">What is NAVX?</h2>
+          <div class="about-grid">
+            <div class="about-text">
+              <p>
+                A sticky navbar is one of the most common UI patterns — and one
+                of the most poorly implemented. Most developers just slap
+                <code>position: sticky</code> and call it done.
+              </p>
+              <p>
+                NAVX is a fully engineered navbar system with 8 distinct scroll
+                behaviors, active section tracking, mobile drawer, scroll
+                progress indicator, and a live state debugger — all in pure
+                HTML, CSS and JavaScript.
+              </p>
+              <p>
+                No frameworks. No scroll libraries. Just clean, precise frontend
+                engineering.
+              </p>
+            </div>
+            <div class="about-stats">
+              <div class="stat-card">
+                <div class="stat-num">8</div>
+                <div class="stat-label">Scroll behaviors</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-num">6</div>
+                <div class="stat-label">Nav sections tracked</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-num">0</div>
+                <div class="stat-label">Libraries used</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-num">60</div>
+                <div class="stat-label">FPS smooth</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURES SECTION -->
+      <section
+        class="section features-section"
+        id="features"
+        aria-label="Features"
+      >
+        <div class="section-inner">
+          <div class="section-tag">
+            <span class="tag-num">02</span>
+            <span class="tag-line" aria-hidden="true"></span>
+            Features
+          </div>
+          <h2 class="section-title">8 Scroll Behaviors</h2>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">01</div>
+              <h3 class="feature-title">Sticky on Scroll</h3>
+              <p class="feature-desc">
+                Navbar locks to top after scrolling past the hero. Uses
+                <code>IntersectionObserver</code> for zero-overhead detection.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">02</div>
+              <h3 class="feature-title">Hide on Scroll Down</h3>
+              <p class="feature-desc">
+                Navbar slides up and hides when scrolling down, giving full
+                screen space for content.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">03</div>
+              <h3 class="feature-title">Reveal on Scroll Up</h3>
+              <p class="feature-desc">
+                Instantly slides back down the moment you scroll up — smooth CSS
+                transform transition.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">04</div>
+              <h3 class="feature-title">Glassmorphism Effect</h3>
+              <p class="feature-desc">
+                Background switches from transparent to frosted glass with
+                <code>backdrop-filter: blur()</code> after scrolling.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">05</div>
+              <h3 class="feature-title">Active Section Tracking</h3>
+              <p class="feature-desc">
+                <code>IntersectionObserver</code> watches all sections and
+                highlights the correct nav link in real time.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">06</div>
+              <h3 class="feature-title">Scroll Progress Bar</h3>
+              <p class="feature-desc">
+                A thin progress bar at the top of the navbar fills as you scroll
+                through the page.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">07</div>
+              <h3 class="feature-title">Shrink on Scroll</h3>
+              <p class="feature-desc">
+                Navbar height and font size reduce slightly after scrolling —
+                creating a compact, focused state.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">08</div>
+              <h3 class="feature-title">Mobile Drawer</h3>
+              <p class="feature-desc">
+                Animated hamburger → close icon morphing. Full-screen mobile
+                menu with staggered link animations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SHOWCASE SECTION -->
+      <section
+        class="section showcase-section"
+        id="showcase"
+        aria-label="Showcase"
+      >
+        <div class="section-inner">
+          <div class="section-tag">
+            <span class="tag-num">03</span>
+            <span class="tag-line" aria-hidden="true"></span>
+            Showcase
+          </div>
+          <h2 class="section-title">Live State Monitor</h2>
+          <p class="section-sub">
+            The badge in the top-right of the navbar shows the real-time navbar
+            state as you scroll.
+          </p>
+
+          <div class="showcase-cards">
+            <div class="showcase-card">
+              <div class="state-preview default-state">
+                <div class="preview-nav"></div>
+              </div>
+              <div class="showcase-label">Default</div>
+              <div class="showcase-desc">
+                At top of page — transparent background, full height
+              </div>
+            </div>
+            <div class="showcase-card">
+              <div class="state-preview scrolled-state">
+                <div class="preview-nav scrolled"></div>
+              </div>
+              <div class="showcase-label">Scrolled</div>
+              <div class="showcase-desc">
+                Glass background, compact height, shadow
+              </div>
+            </div>
+            <div class="showcase-card">
+              <div class="state-preview hidden-state">
+                <div class="preview-nav hidden-nav"></div>
+              </div>
+              <div class="showcase-label">Hidden</div>
+              <div class="showcase-desc">
+                Scroll down — slides above viewport
+              </div>
+            </div>
+            <div class="showcase-card">
+              <div class="state-preview visible-state">
+                <div class="preview-nav visible-nav"></div>
+              </div>
+              <div class="showcase-label">Revealed</div>
+              <div class="showcase-desc">Scroll up — slides back instantly</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TECH SECTION -->
+      <section class="section tech-section" id="tech" aria-label="Tech stack">
+        <div class="section-inner">
+          <div class="section-tag">
+            <span class="tag-num">04</span>
+            <span class="tag-line" aria-hidden="true"></span>
+            Tech
+          </div>
+          <h2 class="section-title">Engineering Stack</h2>
+          <div class="tech-grid">
+            <div class="tech-item">
+              <span class="tech-icon">⟨/⟩</span>
+              <span class="tech-name">HTML5</span>
+              <span class="tech-desc">Semantic, accessible structure</span>
+            </div>
+            <div class="tech-item">
+              <span class="tech-icon">#</span>
+              <span class="tech-name">CSS3</span>
+              <span class="tech-desc"
+                >Custom properties, backdrop-filter, transitions</span
+              >
+            </div>
+            <div class="tech-item">
+              <span class="tech-icon">JS</span>
+              <span class="tech-name">Vanilla JS</span>
+              <span class="tech-desc"
+                >IntersectionObserver, scroll events, RAF</span
+              >
+            </div>
+            <div class="tech-item">
+              <span class="tech-icon">∅</span>
+              <span class="tech-name">Zero Deps</span>
+              <span class="tech-desc">No libraries, no frameworks</span>
+            </div>
+          </div>
+          <div class="concepts-list">
+            <div class="concept-tag">IntersectionObserver</div>
+            <div class="concept-tag">scroll event</div>
+            <div class="concept-tag">requestAnimationFrame</div>
+            <div class="concept-tag">CSS transforms</div>
+            <div class="concept-tag">backdrop-filter</div>
+            <div class="concept-tag">CSS custom properties</div>
+            <div class="concept-tag">position: fixed</div>
+            <div class="concept-tag">transition timing</div>
+            <div class="concept-tag">ARIA attributes</div>
+            <div class="concept-tag">hamburger morphing</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section
+        class="section contact-section"
+        id="contact"
+        aria-label="Contact"
+      >
+        <div class="section-inner contact-inner">
+          <div class="section-tag">
+            <span class="tag-num">05</span>
+            <span class="tag-line" aria-hidden="true"></span>
+            Contact
+          </div>
+          <h2 class="section-title">Let's Connect</h2>
+          <p class="contact-sub">
+            Part of the 100 Days · 100 Projects series by Azman Ali.
+          </p>
+          <div class="contact-links">
+            <a
+              href="https://www.linkedin.com/in/azman08/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-link linkedin"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                />
+              </svg>
+              LinkedIn
+            </a>
+            <a
+              href="https://github.com/azman08"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-link github"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                />
+              </svg>
+              GitHub
+            </a>
+            <a
+              href="https://linktr.ee/codewithazman"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-link linktree"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M7.953 15.066c-.08.163-.08.324-.08.486.08.517.528.897 1.052.818l2.678-.4v4.502c0 .64.48 1.15 1.12 1.15h.64c.64 0 1.12-.51 1.12-1.15v-4.502l2.678.4c.524.08.972-.3 1.052-.818 0-.162 0-.323-.08-.486l-4.22-8.394a1.136 1.136 0 0 0-2.032 0zm8.304-7.308l2.35-2.35a1.12 1.12 0 0 0 0-1.585 1.12 1.12 0 0 0-1.585 0l-2.35 2.35V3.5A1.5 1.5 0 0 0 13.172 2h-.344A1.5 1.5 0 0 0 11.328 3.5v2.673l-2.35-2.35a1.12 1.12 0 0 0-1.585 0 1.12 1.12 0 0 0 0 1.585l2.35 2.35H7.1a1.5 1.5 0 0 0-1.5 1.5v.344a1.5 1.5 0 0 0 1.5 1.5h2.743l-2.35 2.35a1.12 1.12 0 0 0 0 1.585 1.12 1.12 0 0 0 1.585 0l2.35-2.35v2.673a1.5 1.5 0 0 0 1.5 1.5h.344a1.5 1.5 0 0 0 1.5-1.5v-2.673l2.35 2.35a1.12 1.12 0 0 0 1.585 0 1.12 1.12 0 0 0 0-1.585l-2.35-2.35H16.9a1.5 1.5 0 0 0 1.5-1.5v-.344a1.5 1.5 0 0 0-1.5-1.5z"
+                />
+              </svg>
+              Linktree
+            </a>
+          </div>
+          <!-- <div class="contact-series">
+            <a
+              href="https://100days100projects-chi.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="series-link"
+            >
+              → Full series: 100days100projects-chi.vercel.app
+            </a>
+          </div> -->
+        </div>
+      </section>
+    </main>
+
+    <!-- PAGE FOOTER -->
+    <footer class="page-footer" role="contentinfo">
+      <span>NAVX · 2026 · Stick to it.</span>
+      <span class="footer-sep" aria-hidden="true">◈</span>
+      <div class="footer-links">
+        <a
+          href="https://www.linkedin.com/in/azman08/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >LinkedIn</a
+        >
+        <a
+          href="https://github.com/azman08"
+          target="_blank"
+          rel="noopener noreferrer"
+          >GitHub</a
+        >
+      </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+      ↑
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
