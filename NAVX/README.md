@@ -9,7 +9,7 @@
 
 ## 🚀 Live Demo
 
-[**[→ 100days100projects-chi.vercel.app](https://100days100projects-chi.vercel.app/)**](https://100days100projects-y4bw.vercel.app/)
+(https://100days100projects-y4bw.vercel.app/)
 
 ---
 
@@ -181,4 +181,5 @@ If this helped you or inspired your own build, drop a star — it keeps the chal
 <div align="center">
   <sub>Built with ❤️ and consistency · Part of the 100 Days 100 Projects series</sub>
 </div>
+
 
