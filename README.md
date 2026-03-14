@@ -21,7 +21,7 @@ The **100 Days 100 Projects** challenge is a self-imposed commitment to create s
 - CSS styling and layout techniques (Flexbox, Grid, animations, etc.)
 - JavaScript functionality (DOM manipulation, API usage, event handling, etc.)
 
-By the end of this journey, I hope to have a diverse portfolio of web projects that demonstrate various skills and techniques.
+By the end of this journey, I hope to have a diverse portfolio of web projects that demonstrate various skills and techniques...
 ## How to Run the Projects
 
 Each project has its own folder. To run any of the projects:
