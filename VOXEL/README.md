@@ -10,8 +10,7 @@
 
 ## 🚀 Live Demo
 
-**[→ 100days100projects-chi.vercel.app](https://100days100projects-chi.vercel.app/)**
-
+https://100days100projects-tnjg.vercel.app/
 ---
 
 ## 📌 About
