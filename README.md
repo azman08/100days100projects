@@ -2,7 +2,7 @@
 
 Welcome to my **100 Days 100 Projects** challenge repository! 🚀
 
-This repository is dedicated to my personal journey of building **100 projects** in **100 days** using **HTML**, **CSS**, and **JavaScript**. The goal is to sharpen my skills, experiment with creative ideas, and consistently work on new projects every day.
+This repository is dedicated to my personal journey of building **100 projects** in **100 days** using **HTML**, **CSS**, and **JavaScript**. The goal is to sharpen my skills, experiment with creative ideas, and consistently work on new projects every DAY
 
 Feel free to explore, give feedback, or even fork the repository to start your own challenge!
 
